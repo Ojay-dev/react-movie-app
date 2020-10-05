@@ -25,7 +25,7 @@ function Home() {
 	useEffect(() => {
 		(async () => {
 			const data = await fetchMoviesData();
-      setTimeout(() => {
+			setTimeout(() => {
 				setMovieData((previousData) => ({ ...previousData, ...mapIntoObject(data) }));
 			}, 1000);
 		})();
@@ -44,7 +44,13 @@ function Home() {
 			{Object.values(movieData)
 				.sort((x, y) => y.year - x.year)
 				.map((movie) => (
-					<Movie key={movie.id} id={movie.id} image={movie.medium_cover_image} title={movie.title} year={movie.year} />
+					<Movie
+						key={movie.id}
+						id={movie.id}
+						image={movie.medium_cover_image}
+						title={movie.title}
+						year={movie.year}
+					/>
 				))}
 		</div>
 	);

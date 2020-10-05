@@ -1,0 +1,89 @@
+.movie-info {
+  @include containerSpacing();
+  display: grid;
+  justify-items: center;
+  align-items: center;
+
+  &__text-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image-cropper {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 50%;
+    height: 35rem;
+    margin-bottom: 1rem;
+    transition: 0.8s;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.9rem;
+    line-height: 2rem;
+    margin: 1rem 0 0.5rem;
+  }
+
+  &__year {
+    font-weight: normal;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    margin-bottom: 0.8rem;
+  }
+
+  &__genre {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.7rem;
+    margin-bottom: 1rem;
+  }
+
+  &__write-up {
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.3rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 40% 60%;
+    &__image-cropper {
+      width: 80%;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    &__title {
+      font-size: 2.7rem;
+      line-height: 3rem;
+      // margin: 1rem 0 .5rem;
+    }
+
+    &__year {
+      font-weight: normal;
+      font-size: 1.8rem;
+      line-height: 2rem;
+      margin-bottom: 0.8rem;
+    }
+
+    &__genre {
+      font-weight: normal;
+      font-size: 1.5rem;
+      line-height: 1.7rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &__write-up {
+      font-weight: normal;
+      font-size: 1.3rem;
+      line-height: 1.4em;
+    }
+  }
+}

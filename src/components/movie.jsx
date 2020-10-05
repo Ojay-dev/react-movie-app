@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 const truncateTitle = (input) => input.length > 20 ? `${input.substring(0, 18)}...` : input;
 
 export default function Movie(props) {
-	const { image, title, year } = props;
+	const { id, image, title, year } = props;
 
 	return (
 		<div className="movie">
-			<Link to="#" className="movie__link">
+			<Link to={`/Movie-info/${id}`} className="movie__link">
 				<div className="movie__image-cropper">
 					<img src={image} alt="" className="movie__image" />
 				</div>

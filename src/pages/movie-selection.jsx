@@ -42,7 +42,7 @@ export default function ({ match }) {
 			<div className="movie-info__text-section">
 				<h2 className="movie-info__title">{movieDetails.title}</h2>
 				<span className="movie-info__year">{movieDetails.year}</span>
-				<span className="movie-info__genre">({movieDetails.genres.join('/')})</span>
+				<p className="movie-info__genre">({movieDetails.genres.slice(0, 3).join('/')})</p>
 
 				<article className="movie-info__write-up">{movieDetails.description_full}</article>
 			</div>

@@ -42,13 +42,15 @@
     font-weight: normal;
     font-size: 1rem;
     line-height: 1.7rem;
-    margin-bottom: 1rem;
+    margin: 0;
+    margin-bottom: 1.5rem;
   }
 
   &__write-up {
     font-weight: normal;
     font-size: 1rem;
-    line-height: 1.3rem;
+    line-height: 1.5rem;
+    // text-align: justify;
   }
 
   @media screen and (min-width: 768px) {
